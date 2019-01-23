@@ -8,7 +8,7 @@
     <title>Unity Hub (install)</title>
     <authors>Unity Technologies</authors>
     <projectUrl>https://unity3d.com/</projectUrl>
-    <iconUrl>https://github.com/JipSterk/Chocolatey-Packages/tree/master/unity-hub/icons/unity.png</iconUrl>
+    <iconUrl>https://res.cloudinary.com/dsb5huzxb/image/upload/v1548255552/unity.png</iconUrl>
     <copyright>Copyright © 2018 Unity Technologies</copyright>
     <licenseUrl>https://unity3d.com/legal/terms-of-service/software</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
