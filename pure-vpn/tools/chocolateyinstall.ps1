@@ -1,13 +1,11 @@
-$ErrorActionPreference = "Stop";
+﻿$ErrorActionPreference = "Stop";
 
-$packageName = "unity-hub"
+$packageName = "pure-vpn"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe"
-$checksum64 = "e539f45cc2ecd327caebba59f82ef69a83ac3a7c9b2d566a7bcecc0ed79bbcd1"
+$url = "https://s3.amazonaws.com/purevpn-dialer-assets/windows/app/purevpn_setup.exe"
+$checksum = "ff8bf0f341d07da58c289a80954c5627a29a6644657be03050ce661510196c7e"
 
 $args = "/S"
-
-$pp = Get-PackageParameters
 if ($pp.InstallationPath) {
     $args += " /D=$($pp.InstallationPath)"
     Write-Host "Param: installing to $($pp.InstallationPath)"
@@ -16,10 +14,10 @@ if ($pp.InstallationPath) {
 $packageArgs = @{
     packageName    = $packageName
     fileType       = "EXE"
-    url64bit       = $url64
-    softwareName   = "Unity Hub"
-    checksum64     = $checksum64
-    checksumType64 = "sha256"
+    url            = $url
+    softwareName   = "Pure vpn"
+    checksum       = $checksum
+    checksumType   = "sha256"
     silentArgs     = $args
     validExitCodes = @(0)
 }
