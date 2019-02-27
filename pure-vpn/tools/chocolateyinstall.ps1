@@ -6,6 +6,8 @@ $url = "https://s3.amazonaws.com/purevpn-dialer-assets/windows/app/purevpn_setup
 $checksum = "ff8bf0f341d07da58c289a80954c5627a29a6644657be03050ce661510196c7e"
 
 $args = "/S"
+
+$pp = Get-PackageParameters
 if ($pp.InstallationPath) {
     $args += " /D=$($pp.InstallationPath)"
     Write-Host "Param: installing to $($pp.InstallationPath)"
