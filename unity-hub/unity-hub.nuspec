@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>unity-hub</id>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
     <packageSourceUrl>https://github.com/JipSterk/Chocolatey-Packages/tree/master/unity-hub</packageSourceUrl>
     <owners>JipSterk</owners>
     <title>Unity Hub (install)</title>
     <authors>Unity Technologies</authors>
     <projectUrl>https://unity3d.com/</projectUrl>
-    <iconUrl>https://res.cloudinary.com/dsb5huzxb/image/upload/v1548255552/unity.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/JipSterk/Chocolatey-Packages/unity-hub/unity.png</iconUrl>
     <copyright>Copyright © 2018 Unity Technologies</copyright>
     <licenseUrl>https://unity3d.com/legal/terms-of-service/software</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
