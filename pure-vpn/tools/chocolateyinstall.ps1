@@ -3,7 +3,7 @@
 $packageName = "pure-vpn"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = "https://s3.amazonaws.com/purevpn-dialer-assets/windows/app/purevpn_setup.exe"
-$checksum = "b4ed1dd010aecf68af30358cc32ec7e1"
+$checksum = "daf32ec434ea5469af7183d68d939748ef7a583aa0d9657f7f1602e32f527b31"
 
 $args = "/S"
 
@@ -19,7 +19,7 @@ $packageArgs = @{
     url            = $url
     softwareName   = "Pure vpn"
     checksum       = $checksum
-    checksumType   = "md5"
+    checksumType   = "sha256"
     silentArgs     = $args
     validExitCodes = @(0)
 }
