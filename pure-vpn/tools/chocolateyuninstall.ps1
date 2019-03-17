@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = "Stop"
 
 $packageName = "pure-vpn"
-$softwareName = "Pure vpn"
+$softwareName = "PureVPN"
 $installerType = "EXE"
 $silentArgs = "/S"
 $validExitCodes = @(0)
