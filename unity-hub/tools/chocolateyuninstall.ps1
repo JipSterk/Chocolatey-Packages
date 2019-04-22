@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$packageName = "unity-hub"
+$packageName = $env:ChocolateyPackageName
 $softwareName = "Unity Hub"
 $installerType = "EXE"
 $silentArgs = "/S"

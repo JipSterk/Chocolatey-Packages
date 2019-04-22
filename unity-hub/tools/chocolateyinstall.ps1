@@ -1,6 +1,5 @@
-$ErrorActionPreference = "Stop";
+$ErrorActionPreference = "Stop"
 
-$packageName = "unity-hub"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64 = "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe"
 $checksum64 = "a65b3907a0eedc3645c198c74aeb7e9634ea964a6938a1bf753a1db5be553997"
@@ -14,7 +13,7 @@ if ($pp.InstallationPath) {
 }
 
 $packageArgs = @{
-    packageName    = $packageName
+    packageName    = $env:ChocolateyPackageName
     fileType       = "EXE"
     url64bit       = $url64
     softwareName   = "Unity Hub"
