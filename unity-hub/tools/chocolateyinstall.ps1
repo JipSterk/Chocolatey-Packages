@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64 = "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe"
-$checksum64 = "a926d9231b68398fd735f28bc5d18380254eeb8b3793c16306924495d95ddcc1"
+$checksum64 = "ae0506309e8bea60a08e56005fef517a6cf55b53005eb37a0dfa932f95cc2671"
 
 $args = "/S"
 
