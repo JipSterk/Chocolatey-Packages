@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>unity-hub</id>
+    <id>unity-hub-uiii</id>
     <version>2.2.2</version>
     <packageSourceUrl>https://github.com/JipSterk/Chocolatey-Packages/tree/master/unity-hub</packageSourceUrl>
     <owners>JipSterk</owners>
@@ -25,7 +25,7 @@
 - Add components to existing installations of the Editor. When you download a version of the Editor through Unity Hub, you can find and add additional components (such as specific platform support, Visual Studio, offline docs and Standard Assets) either during initial install or at a later date.
 - Use Project Templates to jump-start the creation process for common Project types. Unity’s Project Templates provide default values for common settings when you create a new Project. Project Templates preset batches of settings for a target game type or level of visual fidelity. For more information, see Project Templates.
     </description>
-    <releaseNotes>- [Release Notes](https://unity3d.com/unity/whats-new/)</releaseNotes>
+    <releaseNotes>- [Release Notes](https://unity3d.com/hub/whats-new/)</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
