@@ -2,7 +2,7 @@ name: update
 
 on:
   schedule:
-    - cron:  '0 * * * *' # Every hour
+    - cron:  '0 0 * * *' # Every day at 00:00
 
 defaults:
   run:
@@ -26,4 +26,11 @@ jobs:
       env:
         api_key: ${{ secrets.CHOCOLATEY_API_KEY }}
       run: |
-        updateall -Options ([ordered]@{ Push = $true })
+        $result = updateall -Options ([ordered]@{ Push = $true })
+        if ($result.Updated) {
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git add .
+          git commit -m "update version"
+          git push
+        }
