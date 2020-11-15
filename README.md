@@ -1,8 +1,8 @@
 # Chocolatey-Packages
 
-## Bumping a package
+## Bumping a package manually
 
-- `certUtil -hashfile "name" sha256`
-- replace the `$hashchecksum64` in [chocolateyinstall.ps1](unity-hub/tools/chocolateyinstall.ps1) with the newly generated hash
-- execute `choco pack` in [unity-hub](unity-hub)
+> Package is updated automatically using Github actions, see [update.yml](.github/workflows/update.yml)
+
+- `.\update.ps1` in [unity-hub](unity-hub)
 - execute `choco push` in [unity-hub](unity-hub)

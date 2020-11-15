@@ -1,0 +1,29 @@
+name: update
+
+on:
+  schedule:
+    - cron:  '0 * * * *' # Every hour
+
+defaults:
+  run:
+    shell: powershell
+
+jobs:
+  update:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Chocolatey
+      run: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+    - name: Install Auto Updater
+      run: choco install -y au
+
+    - name: Update Packages
+      working-directory: ${{ github.workspace }}
+      env:
+        api_key: ${{ secrets.CHOCOLATEY_API_KEY }}
+      run: |
+        updateall -Options ([ordered]@{ Push = $true })
